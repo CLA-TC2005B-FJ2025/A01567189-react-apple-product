@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { AppleProduct } from './AppleProduct';
+import './App.css'
 
 function getRandomProduct() {
   const products_local = ['iphone', 'ipad', 'watch', 'imac', 'macbook', 'airpods'];
@@ -21,9 +22,9 @@ export function App() {
   });
 
   return (
-    <div>
+    <div className='app'>
       <button onClick={handleClick}>Agregar producto</button>
-      <div>
+      <div className='product-list'>
         {renderedProducts}
       </div>
     </div>
